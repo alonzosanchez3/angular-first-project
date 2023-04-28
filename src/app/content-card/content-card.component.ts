@@ -11,10 +11,22 @@ export class ContentCardComponent {
   @Output() dataEvent = new EventEmitter<string>()
 
   onButtonClick(event:any) {
+    console.log('button click fired')
+    let data = event.target.style.backgroundColor
     this.isSelected = !this.isSelected
-    console.log(this.isSelected)
-    const data = event.target.style.backgroundColor
+    if(!this.isSelected) {
+      data = 'black'
+    }
     this.dataEvent.emit(data)
+  }
+
+  onLoseFocus(event:any) {
+    if(this.isSelected) {
+      console.log('lost focus fired')
+      let data = 'black'
+      this.isSelected = !this.isSelected
+      this.dataEvent.emit(data)
+    }
   }
 
   isSelected: boolean = false;

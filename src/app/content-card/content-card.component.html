@@ -1,4 +1,4 @@
-<div class="app-content-card__container" [ngClass]="{border: isSelected}" [ngStyle]="{borderColor: contentData.color}" >
+<div class="app-content-card__container" [ngClass]="{border: isSelected}" [ngStyle]="{borderColor: contentData.color}" (focusout)="onLoseFocus($event)" >
   <h2 class="app-content-card__title">
     {{contentData.title}}
   </h2>

@@ -1,13 +1,20 @@
 .app-content-card__container {
+  padding: 1rem;
 }
 
 .border {
-  border: solid;
+  border-style: solid;
+  border-width: .1rem .2rem .2rem .1rem;
+  border-radius: 1rem;
+
 }
 .app-content-card__paragraph {
 
 }
 
 .app-content-card__button {
-  color: white
+  color: white;
+  width: 5rem;
+  padding: .3rem;
+  border-radius: .2rem;
 }
