@@ -1,0 +1,8 @@
+.app-content-cards__container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+app-content-card {
+  flex: 50%
+}
