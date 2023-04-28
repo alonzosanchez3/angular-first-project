@@ -1,11 +1,11 @@
-<div class="app-content-card__container">
+<div class="app-content-card__container" [ngClass]="{border: isSelected}" [ngStyle]="{borderColor: contentData.color}" >
   <h2 class="app-content-card__title">
-    This is the title
+    {{contentData.title}}
   </h2>
   <p class="app-content-card__paragraph">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eaque soluta eum obcaecati impedit iste animi, sapiente quae repellat asperiores ratione officiis nam odio molestiae sit in? Dignissimos, sint id!
+    {{contentData.content}}
   </p>
-  <button class="app-content-card__button">
-    Set Color
+  <button class="app-content-card__button" [ngStyle]="{backgroundColor: contentData.color}" (click)="onButtonClick($event)">
+    Set {{contentData.color}}
   </button>
 </div>

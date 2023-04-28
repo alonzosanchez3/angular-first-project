@@ -1,2 +1,7 @@
-<h1>This is the title</h1>
-<app-content-cards></app-content-cards>
+<div class="app__container">
+  <h1 [ngStyle]="{color: textColor}">This is the title</h1>
+  <div class="app-content-card__container">
+    {{receivedData}}
+    <app-content-card *ngFor="let item of data" [contentData]="item" (dataEvent)="onDataReceived($event)"></app-content-card>
+  </div>
+</div>
